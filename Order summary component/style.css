@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  background-color: hsl(225, 100%, 94%);
+  font-family: "Red Hat Display";
+}
+
+.container {
+  display: flex;
+  justify-items: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+.card {
+  background-color: hsl(225, 100%, 98%);
+  border-radius: 40px;
+  overflow: hidden;
+  max-width: 400px;
+
+  align-items: center;
+}
+.annual-pay {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  background-color: hsl(225, 100%, 94%);
+  border-radius: 20px;
+}
+
+.logo {
+  display: flex;
+  height: 70px;
+  align-items: baseline;
+}
+
+.content-bottom {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.process-payment {
+  display: block;
+  margin: 50px 0;
+  padding: 20px 0;
+  color: aliceblue;
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+  background-color: hsl(245, 75%, 52%);
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.cancel-payment {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.content-bottom h1 {
+  margin: 20px 0;
+}
+
+.content-bottom p {
+  margin: 20px 0;
+}
