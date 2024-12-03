@@ -97,3 +97,33 @@ body {
 .content-bottom p {
   color: hsl(224, 23%, 55%);
 }
+
+@media (max-width: 500px) {
+  .card {
+    max-width: 350px;
+    max-height: 700px;
+  }
+  .annual-pay {
+    max-width: 270px;
+    max-height: 60px;
+  }
+  .annual-pay a:link {
+    font-size: 12px;
+  }
+  .annual-text h1 {
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+  }
+  .process-payment {
+    margin: 5px;
+    padding: 10px;
+    width: 270px;
+    height: 50px;
+    font-size: 15px;
+  }
+
+  .cancel-payment {
+    font-size: 15px;
+  }
+}
