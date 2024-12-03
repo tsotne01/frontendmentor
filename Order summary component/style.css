@@ -16,7 +16,7 @@ body {
 
 .container {
   display: flex;
-  justify-items: flex-start;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
 }
@@ -24,36 +24,53 @@ body {
   background-color: hsl(225, 100%, 98%);
   border-radius: 40px;
   overflow: hidden;
-  max-width: 400px;
-
+  max-width: 450px;
   align-items: center;
 }
 .annual-pay {
   display: flex;
-  justify-content: space-between;
   flex-direction: row;
-  align-items: center;
+  justify-content: space-between;
+  align-items: baseline;
   background-color: hsl(225, 100%, 94%);
   border-radius: 20px;
+  padding: 10px 20px;
+  margin: 30px 0;
+  height: 130px;
+  width: 350px;
+}
+.annual-pay a:link {
+  font-weight: bold;
+  font-size: large;
+}
+.annual-text {
+  font-size: 14px;
 }
 
-.logo {
+.logo-content {
   display: flex;
-  height: 70px;
+  flex-direction: row;
   align-items: baseline;
+  font-size: 14px;
+}
+.logo-img {
+  display: inline-block;
+  align-self: center;
 }
 
 .content-bottom {
-  padding: 40px;
   display: flex;
   flex-direction: column;
-  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
 }
 
 .process-payment {
   display: block;
-  margin: 50px 0;
-  padding: 20px 0;
+  margin: 30px 0;
+  padding: 20px 60px;
   color: aliceblue;
   display: flex;
   justify-content: center;
@@ -61,18 +78,21 @@ body {
   background-color: hsl(245, 75%, 52%);
   text-decoration: none;
   font-size: 20px;
+  font-weight: bold;
+  width: 350px;
 }
 
 .cancel-payment {
   display: flex;
   justify-content: center;
   text-decoration: none;
+  font-weight: bold;
+  color: hsl(224, 23%, 55%);
 }
 
 .content-bottom h1 {
   margin: 20px 0;
 }
-
 .content-bottom p {
-  margin: 20px 0;
+  color: hsl(224, 23%, 55%);
 }
