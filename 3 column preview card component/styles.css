@@ -51,32 +51,38 @@ body {
 
 .learn-more-sedans {
   color: hsl(31, 77%, 52%);
+  transition: all 0.5s;
 }
 
 .learn-more-suv {
   color: hsl(184, 100%, 22%);
+  transition: all 0.5s;
 }
 
 .learn-more-luxury {
   color: hsl(179, 100%, 13%);
+  transition: all 0.5s;
 }
 
 .learn-more-sedans:hover {
   background-color: hsl(31, 77%, 52%);
   border: solid 2px hsl(0, 0%, 95%);
   color: hsl(0, 0%, 95%);
+  transform: translateY(-5px);
 }
 
 .learn-more-suv:hover {
   background-color: hsl(184, 100%, 22%);
   border: solid 2px hsl(0, 0%, 95%);
   color: hsl(0, 0%, 95%);
+  transform: translateY(-5px);
 }
 
 .learn-more-luxury:hover {
   background-color: hsl(179, 100%, 13%);
   border: solid 2px hsl(0, 0%, 95%);
   color: hsl(0, 0%, 95%);
+  transform: translateY(-5px);
 }
 
 .card_1,
