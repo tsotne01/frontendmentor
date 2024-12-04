@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100vh;
+}
+
+.top {
+  text-align: center;
+}
+
+.bottom {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  gap: 60px;
+}
+
+.bottom-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.text-content h2,
+.text-content p {
+  width: 500px;
+  line-height: 1.9;
+}
+
+.bottom-1,
+.bottom-2-1,
+.bottom-2-2,
+.bottom-3 {
+  width: 500px;
+  height: 320px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+  position: relative;
+  padding: 40px;
+}
+
+.bottom-1 {
+  border-top: solid hsl(180, 62%, 55%) 3px;
+}
+
+.bottom-2-1 {
+  border-top: solid hsl(0, 78%, 62%) 3px;
+}
+
+.bottom-2-2 {
+  border-top: solid hsl(34, 97%, 64%) 3px;
+}
+
+.bottom-3 {
+  border-top: solid hsl(212, 86%, 64%) 3px;
+}
+
+.header-light {
+  font-weight: 300;
+  color: hsl(229, 6%, 66%);
+  font-size: 40px;
+}
+.header-dark {
+  font-weight: 800;
+  color: hsl(234, 12%, 34%);
+  font-size: 40px;
+}
+.text-content p {
+  font-weight: 200;
+  color: hsl(229, 6%, 66%);
+}
+
+.bottom-1 p,
+.bottom-2-1 p,
+.bottom-2-2 p,
+.bottom-3 p {
+  color: hsl(229, 6%, 66%);
+  font-size: 14px;
+}
+
+.bottom-1 h1,
+.bottom-2-1 h1,
+.bottom-2-2 h1,
+.bottom-3 h1 {
+  font-size: 30px;
+  color: hsl(234, 12%, 34%);
+  font-weight: 700;
+}
+.bottom-1 img,
+.bottom-2-1 img,
+.bottom-2-2 img,
+.bottom-3 img {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+}
+
+@media (max-width: 1440px) {
+  .bottom {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .bottom-2 {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: center;
+  }
+  .bottom-1,
+  .bottom-2-1,
+  .bottom-2-2,
+  .bottom-3 {
+    width: 400px;
+    height: 300px;
+  }
+  .container {
+    gap: 40px;
+  }
+}
