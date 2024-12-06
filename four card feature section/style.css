@@ -122,10 +122,19 @@
   .bottom-2-1,
   .bottom-2-2,
   .bottom-3 {
-    width: 400px;
+    width: 350px;
     height: 300px;
   }
   .container {
     gap: 40px;
+  }
+  .text-content p {
+    font-size: 12px;
+  }
+  .header-light {
+    font-size: 30px;
+  }
+  .header-dark {
+    font-size: 30px;
   }
 }
