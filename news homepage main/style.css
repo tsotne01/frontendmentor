@@ -58,12 +58,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   padding: 50px;
 }
 
 .grid-container {
   display: grid;
-
+  width: 70vw;
   grid-template-rows: 2fr 1fr 1fr;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
