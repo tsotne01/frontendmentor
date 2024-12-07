@@ -5,19 +5,29 @@
   --graysh-blue: hsl(233, 8%, 79%);
   --dark-graysh-blue: hsl(236, 13%, 42%);
   --blue: hsl(240, 100%, 5%);
-  --font-size-paragraph: 15px;
   --header-height: 50px;
-  --header-width: 1440px;
-  --font-size-h1: 60px;
-  --button-font-size: 25px;
+  --header-width: 1200px;
+  --font-size-h1: 45px;
+  --font-size-h2: 40px;
+  --font-size-h3: 17px;
+  --font-size-paragraph: 15px;
+  --button-font-size: 15px;
+  --button-height: 50px;
   --font-size: 25px;
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Inter", sans-serif;
   font-size: var(--font-size-paragraph);
+}
+
+p {
+  line-height: 1.7;
 }
 
 .header-container {
@@ -31,6 +41,14 @@
   height: var(--header-height);
   width: var(--header-width);
   margin: 20px 15px;
+}
+
+.header-menu-li a {
+  transition: color 0.5s;
+}
+
+.header-menu-li a:hover {
+  color: var(--soft-red);
 }
 .logo {
   display: inline-block;
@@ -58,19 +76,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   padding: 50px;
 }
 
 .grid-container {
   display: grid;
-  width: 70vw;
-  grid-template-rows: 2fr 1fr 1fr;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
+  width: var(--header-width);
+  grid-template-rows: 1.5fr 1fr;
+  /* grid-template-columns: repeat(3, 1fr); */
+  grid-gap: 30px;
   margin: 0 50px;
   grid-template-areas:
-    "img img news "
+    "img img news"
     "news-text readmore news"
     "card1 card2 card3";
 }
@@ -92,8 +109,8 @@
   background-color: black;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  padding: 0 20px;
+  justify-content: space-between;
+  padding: 20px;
 }
 
 .whats-new h1 {
@@ -105,26 +122,42 @@
   grid-area: news-text;
 }
 
-.read-more {
-  grid-area: readmore;
-}
-
-.card-1 {
-  grid-area: card1;
-}
-.card-2 {
-  grid-area: card2;
-}
-
-.card-3 {
-  grid-area: card3;
-}
-
 .news-text {
   font-size: var(--font-size-h1);
   font-weight: bold;
 }
 
+.news-1,
+.news-2,
+.news-3 {
+  border-bottom: solid 1px var(--graysh-blue);
+  padding: 20px;
+  color: var(--off-white);
+}
+
+.news-paragraph {
+  color: var(--graysh-blue);
+  font-size: var(--font-size-paragraph);
+}
+
+.read-more-paragraph {
+  color: var(--dark-graysh-blue);
+  padding: 10px 0;
+}
+
+.news-link {
+  text-decoration: none;
+  color: var(--off-white);
+  font-size: var(--font-size);
+}
+
+.news-link:hover {
+  color: var(--soft-orange);
+}
+
+.read-more {
+  grid-area: readmore;
+}
 .read-more {
   display: flex;
   flex-direction: column;
@@ -140,29 +173,66 @@
   color: var(--blue);
   font-size: var(--button-font-size);
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   background-color: var(--soft-red);
-  height: 50px;
-  width: 50%;
+  text-align: center;
+  line-height: var(--button-height);
+  height: var(--button-height);
+  max-width: 60%;
+  padding: 0 10px;
 }
 
-.news-1,
-.news-2,
-.news-3 {
-  border-bottom: solid 1px var(--graysh-blue);
-  padding: 20px;
+.read-more-button:hover {
   color: var(--off-white);
+  background-color: black;
 }
 
-.news-1 p,
-.news-2 p,
-.news-3 p {
-  color: var(--graysh-blue);
-  padding: 10px 0;
+.card-1 {
+  grid-area: card1;
+}
+.card-2 {
+  grid-area: card2;
 }
 
-.news-1 h2,
-.news-2 h2,
-.news-3 h2 {
-  font-size: var(--font-size);
+.card-3 {
+  grid-area: card3;
+}
+
+.card-1,
+.card-2,
+.card-3 {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  /* padding: 10px; */
+  gap: 20px;
+}
+
+.card-1 img,
+.card-2 img,
+.card-3 img {
+  height: 200px;
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  height: 100%;
+  gap: 10px;
+  padding: 0 10px;
+}
+.card-text-h2 {
+  font-size: var(--font-size-h2);
+  color: var(--soft-red);
+}
+.card-text-h3 {
+  font-weight: 800;
+  font-size: var(--font-size-h3);
+}
+
+.card-text-paragraph {
+  color: var(--dark-graysh-blue);
+  font-size: var(--font-size-paragraph);
 }
