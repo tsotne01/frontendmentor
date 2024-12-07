@@ -44,8 +44,6 @@
   line-height: 1.5;
   margin-top: var(--margin-top-container);
 }
-.item {
-}
 
 .item-name {
   font-size: var(--cart-name-font-size);
@@ -71,7 +69,6 @@
 }
 
 .cart {
-  /* background-color: rgba(49, 49, 182, 0.38); */
   min-width: 25%;
   height: 500px;
   padding: 30px;
