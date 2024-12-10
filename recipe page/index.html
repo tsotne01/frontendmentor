@@ -3,32 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="/css/style.css" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Recipe page</title>
   </head>
   <body>
-    <div class="container">
-      <div>
-        <img
-          class="image"
-          src="/images/image-omelette.jpeg"
-          alt="omlette image"
-        />
-        <h1 class="header">Simple Omlette Recipe</h1>
+    <div class="wrapper">
+      <div class="simple-omlette">
+        <img src="./assets/images/image-omelette.jpeg" alt="Omelette image" />
+        <h1>Simple Omelette Recipe</h1>
         <p>
           An easy and quick dish, perfect for any meal. This classic omelette
           combines beaten eggs cooked to perfection, optionally filled with your
           choice of cheese, vegetables, or meats.
         </p>
-        <div class="sub-container">
-          <h3 class="brown-outfit">Preparation Time</h3>
-          <ul>
-            <li>Total: Approximately 10 minutes</li>
-            <li>Preparation: 5 minutes</li>
-            <li>Cooking: 5 minutes</li>
-          </ul>
-        </div>
-        <h2 class="brown-outfit">Ingredients</h2>
+      </div>
+      <div class="prep-time-container">
+        <h3>Preparation time</h3>
+        <ul>
+          <li><strong>Total:</strong> Approximately 10 minutes</li>
+          <li><strong>Preparation:</strong> 5 minutes</li>
+          <li><strong>Cooking:</strong> 5 minutes</li>
+        </ul>
+      </div>
+      <div class="ingredients-container">
+        <h2>Ingredients</h2>
         <ul>
           <li>2-3 large eggs</li>
           <li>Salt, to taste</li>
@@ -38,7 +44,9 @@
             Optional fillings: cheese, diced vegetables, cooked meats, herbs
           </li>
         </ul>
-        <h2 class="brown-outfit">Instructions</h2>
+      </div>
+      <div class="instructions-container">
+        <h2>Instructions</h2>
         <ol>
           <li>
             Beat the eggs: In a bowl, beat the eggs with a pinch of salt and
@@ -65,23 +73,40 @@
           </li>
           <li>Enjoy: Serve hot, with additional salt and pepper if needed.</li>
         </ol>
-        <h2 class="brown-outfit">Nutrition</h2>
-        <p>
-          The table below shows nutritional values per serving without the
-          additional fillings.
-        </p>
-        <span class="footer-el"
-          ><span>Calories</span> <span class="brown-outfit">277kcal</span></span
-        >
-        <span class="footer-el"
-          ><span>Carbs</span> <span class="brown-outfit">0g</span></span
-        >
-        <span class="footer-el"
-          ><span>Protein</span> <span class="brown-outfit">20g</span></span
-        >
-        <span class="footer-el"
-          ><span>Fat</span> <span class="brown-outfit">22g</span></span
-        >
+      </div>
+      <div class="nutrition-container">
+        <table>
+          <thead>
+            <tr>
+              <th><h2>Nutrition</h2></th>
+            </tr>
+            <tr>
+              <th>
+                The table below shows nutritional values per serving without the
+                additional fillings.
+              </th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Calories</td>
+              <td>277kcal</td>
+            </tr>
+            <tr>
+              <td>Carbs</td>
+              <td>0g</td>
+            </tr>
+            <tr>
+              <td>Protein</td>
+              <td>20g</td>
+            </tr>
+            <tr>
+              <td>Fat</td>
+              <td>22g</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </body>
