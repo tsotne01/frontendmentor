@@ -19,42 +19,42 @@
     <div class="wrapper">
       <main class="cotainer">
         <div class="cotainer__calculator">
-          <form action="">
+          <form>
             <div class="container__calculator-header">
               <h1>Mortgage Calculator</h1>
               <button class="cotainer__calculator-clear-btn">Clear All</button>
             </div>
+            <div class="container__calculator-body">
+              <label for="mortgage-amount">Mortgage Amount</label>
+              <input
+                type="number"
+                name=""
+                id="mortgage-amount"
+                min="0"
+                placeholder="0"
+                required
+              />
 
-            <label for="mortgage-amount">Mortgage Amount</label>
-            <input
-              type="number"
-              name=""
-              id="mortgage-amount"
-              min="0"
-              placeholder="0"
-              required
-            />
-
-            <label for="mortgage-term">Mortgage Term</label>
-            <input
-              type="number"
-              name=""
-              id="mortgage-term"
-              min="0"
-              placeholder="0"
-              aria-rowspan="1"
-              required
-            />
-            <label for="interest-rate">Interest Rate</label>
-            <input
-              type="float"
-              name=""
-              id="interest-rate"
-              min="0"
-              placeholder="0"
-              required
-            />
-
+              <label for="mortgage-term">Mortgage Term</label>
+              <input
+                type="number"
+                name=""
+                id="mortgage-term"
+                min="0"
+                placeholder="0"
+                aria-rowspan="1"
+                required
+              />
+              <label for="interest-rate">Interest Rate</label>
+              <input
+                type="float"
+                name=""
+                id="interest-rate"
+                min="0"
+                placeholder="0"
+                required
+              />
+            </div>
             <div class="mortage__or__interest__type">
               <label for="mortgage-type">Mortgage Type</label>
               <div class="radio__group">
@@ -89,7 +89,19 @@
             </div>
           </form>
         </div>
-        <div class="results">
+        <div class="see-result">
+          <div class="illustration">
+            <img src="./assets/images/illustration-empty.svg" alt="" />
+          </div>
+          <div class="see-result-text">
+            <h2>Result Shown Here</h2>
+            <p>
+              Complete the form and click "calculate repayments" to see what
+              your monthly repayments whould be
+            </p>
+          </div>
+        </div>
+        <div class="results hidden">
           <div class="result__header">
             <h1>Your results</h1>
             <p>

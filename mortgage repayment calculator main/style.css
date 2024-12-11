@@ -48,11 +48,15 @@
   border-radius: var(--result-b-radius);
 }
 
-.cotainer__calculator {
+.cotainer__calculator form {
   padding: var(--calc-container-padding)
     calc(var(--calc-container-padding) * 1.5);
-  line-height: 3;
+  height: var(--calculator-height);
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
 }
+
 .container__calculator-header {
   display: flex;
   justify-content: space-between;
@@ -102,7 +106,8 @@ label:hover {
   content: "sdasa";
 }
 
-.results {
+.results,
+.see-result {
   background-color: var(--Slate-900);
   border-radius: 0 var(--result-b-radius) var(--result-b-radius)
     calc(var(--result-b-radius) * 3);
@@ -111,6 +116,26 @@ label:hover {
   padding: var(--calc-container-padding)
     calc(var(--calc-container-padding) * 1.5);
   color: var(--Slate-700);
+}
+
+.see-result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.illustration,
+.see-result-text {
+  /* width: 300px; */
+  h2 {
+    color: var(--White);
+  }
+  p {
+    color: var(--Slate-500);
+  }
 }
 
 .result__header {
@@ -173,6 +198,10 @@ label:hover {
   padding-left: 5px;
   font-size: var(--fs-paragraph);
 }
+
+.hidden {
+  display: none;
+}
 @media (max-width: 375px) {
   :root {
     --fs-paragraph: 13px;
@@ -195,7 +224,8 @@ label:hover {
     height: 100vh;
     border-radius: 0;
   }
-  .results {
+  .results,
+  .see-result {
     border-radius: 0;
     height: fit-content;
   }
