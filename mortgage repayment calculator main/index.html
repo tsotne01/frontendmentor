@@ -24,13 +24,15 @@
               <h1>Mortgage Calculator</h1>
               <button class="cotainer__calculator-clear-btn">Clear All</button>
             </div>
+
             <label for="mortgage-amount">Mortgage Amount</label>
             <input
               type="number"
               name=""
               id="mortgage-amount"
               min="0"
-              value="0"
+              placeholder="0"
+              required
             />
 
             <label for="mortgage-term">Mortgage Term</label>
@@ -39,8 +41,9 @@
               name=""
               id="mortgage-term"
               min="0"
-              value="0"
+              placeholder="0"
               aria-rowspan="1"
+              required
             />
             <label for="interest-rate">Interest Rate</label>
             <input
@@ -48,31 +51,40 @@
               name=""
               id="interest-rate"
               min="0"
-              value="0"
-              aria-rowspan="1"
+              placeholder="0"
+              required
             />
-            <div class="mortage__type">
+
+            <div class="mortage__or__interest__type">
               <label for="mortgage-type">Mortgage Type</label>
-              <input
-                type="radio"
-                id="repayment"
-                name="mortgage-type"
-                value="Repayment"
-              />
-              <label for="repayment">Repayment</label>
-              <input
-                type="radio"
-                id="interest-only"
-                name="mortgage-type"
-                value="Interest Only"
-              />
-              <label for="interest-only">Interest Only</label>
+              <div class="radio__group">
+                <input
+                  type="radio"
+                  id="repayment"
+                  name="mortgage-type"
+                  value="Repayment"
+                  required
+                />
+                <label for="repayment">Repayment</label>
+              </div>
+              <div class="radio__group">
+                <input
+                  type="radio"
+                  id="interest-only"
+                  name="mortgage-type"
+                  value="Interest Only"
+                  required
+                />
+                <label for="interest-only">Interest Only</label>
+              </div>
             </div>
             <div class="submt-btn">
               <input
                 type="submit"
                 id="calculate_repayments"
+                class="calc-sbmt"
                 value="Calculate repayments"
+                required
               />
             </div>
           </form>
