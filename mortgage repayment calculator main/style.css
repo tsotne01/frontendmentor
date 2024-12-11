@@ -73,7 +73,8 @@
 }
 
 .cotainer__calculator-clear-btn:hover,
-input {
+input:hover,
+label:hover {
   cursor: pointer;
 }
 

@@ -19,7 +19,7 @@
     <div class="wrapper">
       <main class="cotainer">
         <div class="cotainer__calculator">
-          <form action="#">
+          <form action="">
             <div class="container__calculator-header">
               <h1>Mortgage Calculator</h1>
               <button class="cotainer__calculator-clear-btn">Clear All</button>
@@ -47,7 +47,7 @@
             />
             <label for="interest-rate">Interest Rate</label>
             <input
-              type="number"
+              type="float"
               name=""
               id="interest-rate"
               min="0"
@@ -105,7 +105,7 @@
             </div>
             <div class="result__calculation-box-payment-amnt-total">
               <h3>Total you'll repay over term</h3>
-              <p>&#163; 539,322.94</p>
+              <p class="total-repay">&#163; 539,322.94</p>
             </div>
           </div>
         </div>
@@ -128,5 +128,6 @@
     repayments” again. Your monthly repayments Total you'll repay over the term -->
 
     <!-- Completed results end -->
+    <script src="./script.js"></script>
   </body>
 </html>
