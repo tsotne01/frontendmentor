@@ -40,12 +40,8 @@ const clearEverything = () => {
   mortageAmount.value = "";
   mortageTerm.value = "";
   interestRate.value = "";
-  replacement.checked
-    ? (replacement.checked = false)
-    : (replacement.checked = false);
-  interestOnly.checked
-    ? (interestOnly.checked = false)
-    : (replacement.checked = false);
+  replacement.checked = false;
+  interestOnly.checked = false;
 };
 clearAllBtn.addEventListener("click", clearEverything);
 calculateBtn.addEventListener("click", calcAndDisplayMortgage);
