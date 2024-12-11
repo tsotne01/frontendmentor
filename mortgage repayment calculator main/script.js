@@ -15,9 +15,9 @@ const totalRepay = document.querySelector(".total-repay");
 const clearAllBtn = document.querySelector(".cotainer__calculator-clear-btn");
 
 const calcAndDisplayMortgage = (e) => {
-  console.log(e.target);
-  console.log(replacement.checked);
-  console.log(interestOnly.checked);
+  // console.log(e.target);
+  // console.log(replacement.checked);
+  // console.log(interestOnly.checked);
 
   const mrtamount = mortageAmount.value;
   const mrtTrm = mortageTerm.value;
@@ -35,6 +35,17 @@ const calcAndDisplayMortgage = (e) => {
   }
 };
 
-const clearEverything = () => {};
+const clearEverything = () => {
+  // calculateBtn;
+  mortageAmount.value = "";
+  mortageTerm.value = "";
+  interestRate.value = "";
+  replacement.checked
+    ? (replacement.checked = false)
+    : (replacement.checked = false);
+  interestOnly.checked
+    ? (interestOnly.checked = false)
+    : (replacement.checked = false);
+};
 clearAllBtn.addEventListener("click", clearEverything);
 calculateBtn.addEventListener("click", calcAndDisplayMortgage);

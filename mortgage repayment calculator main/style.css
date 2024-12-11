@@ -146,7 +146,7 @@ label:hover {
   }
 }
 .result__calculation-box-payment-amnt {
-  font-size: 64px;
+  font-size: calc(var(--fs-header) * 1.5);
   color: var(--Lime);
   border-bottom: solid 1px var(--Slate-100);
 }
@@ -172,4 +172,37 @@ label:hover {
   vertical-align: center;
   padding-left: 5px;
   font-size: var(--fs-paragraph);
+}
+@media (max-width: 375px) {
+  :root {
+    --fs-paragraph: 13px;
+    --fs-header: 18px;
+    /* --fw-500: 500;
+    --fw-700: 700; */
+    /* --calculator-height: 500px; */
+    --calculator-width: 375px;
+    --number-input-height: 30px;
+    --number-input-b-radius: 5px;
+    --result-b-radius: 30px;
+    --calc-container-padding: 25px;
+    /* --clear-btn-height: --fs-paragraph; */
+    --calculate-sbmt-btn-ht: 40px;
+    --calculate-sbmt-btn-wth: 100%;
+    --calculate-sbmt-btn-b-radius: 20px;
+  }
+  .cotainer {
+    flex-direction: column;
+    height: 100vh;
+    border-radius: 0;
+  }
+  .results {
+    border-radius: 0;
+    height: fit-content;
+  }
+  .result__calculation-box {
+    height: fit-content;
+  }
+  .cotainer__calculator {
+    padding: var(--calc-container-padding);
+  }
 }
