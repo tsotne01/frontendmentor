@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Young+Serif&display=swap");
+
+:root {
+  --Lime: hsl(61, 70%, 52%);
+  --Red: hsl(4, 69%, 50%);
+  --White: hsl(0, 0%, 100%);
+  --Slate-100: hsl(202, 86%, 94%);
+  --Slate-300: hsl(203, 41%, 72%);
+  --Slate-500: hsl(200, 26%, 54%);
+  --Slate-700: hsl(200, 24%, 40%);
+  --Slate-900: hsl(202, 55%, 16%);
+  --Slate-1000: hsl(200, 58%, 11%);
+  --fs-paragraph: 16px;
+  --fs-header: 25px;
+  --fw-500: 500;
+  --fw-700: 700;
+  --calculator-height: 700px;
+  --number-input-height: 40px;
+  --number-input-b-radius: 5px;
+  --result-b-radius: 30px;
+  --calc-container-padding: 20px;
+  --clear-btn-height: --fs-paragraph;
+  --calculate-sbmt-btn-ht: 40px;
+  --calculate-sbmt-btn-wth: 60%;
+  --calculate-sbmt-btn-b-radius: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: var(--fw-500);
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--Slate-100);
+}
+.cotainer {
+  width: 1000px;
+  display: flex;
+  background-color: var(--White);
+  border-radius: var(--result-b-radius);
+}
+
+.cotainer__calculator {
+  padding: var(--calc-container-padding)
+    calc(var(--calc-container-padding) * 1.5);
+  line-height: 3;
+}
+.container__calculator-header {
+  display: flex;
+  justify-content: space-between;
+  & h1 {
+    font-weight: var(--fw-700);
+    font-size: var(--fs-header);
+    color: var(--Slate-900);
+  }
+}
+.cotainer__calculator-clear-btn {
+  text-decoration: none;
+  border: 0;
+  height: var(--clear-btn-height);
+  align-self: center;
+  background-color: inherit;
+  color: var(--Slate-500);
+  border-bottom: dotted 1px var(--Slate-500);
+}
+
+.cotainer__calculator-clear-btn:hover {
+  cursor: pointer;
+}
+
+.mortage__type {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#calculate_repayments {
+  background-color: var(--Lime);
+  height: var(--calculate-sbmt-btn-ht);
+  width: var(--calculate-sbmt-btn-wth);
+  font-size: var(--fs-paragraph);
+  border: 0;
+  border-radius: var(--calculate-sbmt-btn-b-radius);
+}
+
+.submt-btn::before {
+  content: url(./assets/images/icon-calculator.svg);
+}
+
+.results {
+  background-color: var(--Slate-900);
+  border-radius: 0 var(--result-b-radius) var(--result-b-radius)
+    calc(var(--result-b-radius) * 3);
+  width: 100%;
+  height: var(--calculator-height);
+  padding: var(--calc-container-padding) calc(var(--calc-container-padding) * 2);
+  color: var(--Slate-700);
+}
+
+.result__header {
+  /*  */
+  line-height: 3;
+  margin-bottom: 50px;
+  h1 {
+    font-size: var(--fs-header);
+    color: var(--White);
+  }
+  p {
+    font-size: var(--fs-paragraph);
+    color: var(--Slate-300);
+    line-height: 1.5;
+  }
+}
+
+.result__calculation-box {
+  height: 50%;
+  border-radius: calc(var(--result-b-radius) / 2);
+  border-top: solid 5px var(--Lime);
+  padding: var(--calc-container-padding);
+  background-color: var(--Slate-1000);
+  line-height: 1.5;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  h2 {
+    font-size: calc(var(--fs-paragraph) * 1.2);
+
+    color: var(--Slate-300);
+  }
+}
+.result__calculation-box-payment-amnt {
+  font-size: 64px;
+  color: var(--Lime);
+  border-bottom: solid 1px var(--Slate-100);
+}
+.result__calculation-box-payment-amnt-total {
+  line-height: 2;
+}
+
+.result__calculation-box-payment-amnt-total p {
+  font-size: var(--fs-header);
+  color: var(--White);
+}
+.result__calculation-box-payment-amnt-total h3 {
+  color: var(--Slate-300);
+}
+
+#mortgage-amount,
+#mortgage-term,
+#interest-rate {
+  width: 100%;
+  height: var(--number-input-height);
+  border-radius: var(--number-input-b-radius);
+  border: solid 1px var(--Slate-700);
+  vertical-align: center;
+  padding-left: 5px;
+  font-size: var(--fs-paragraph);
+}
