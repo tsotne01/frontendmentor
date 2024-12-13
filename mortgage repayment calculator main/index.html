@@ -35,26 +35,31 @@
                 placeholder="0"
                 required
               />
-
-              <label for="mortgage-term">Mortgage Term</label>
-              <input
-                type="number"
-                name=""
-                id="mortgage-term"
-                min="0"
-                placeholder="0"
-                aria-rowspan="1"
-                required
-              />
-              <label for="interest-rate">Interest Rate</label>
-              <input
-                type="float"
-                name=""
-                id="interest-rate"
-                min="0"
-                placeholder="0"
-                required
-              />
+              <div class="choose__option">
+                <div class="group">
+                  <label for="mortgage-term">Mortgage Term</label>
+                  <input
+                    type="number"
+                    name=""
+                    id="mortgage-term"
+                    min="0"
+                    placeholder="0"
+                    aria-rowspan="1"
+                    required
+                  />
+                </div>
+                <div class="group">
+                  <label for="interest-rate">Interest Rate</label>
+                  <input
+                    type="float"
+                    name=""
+                    id="interest-rate"
+                    min="0"
+                    placeholder="0"
+                    required
+                  />
+                </div>
+              </div>
             </div>
             <div class="mortage__or__interest__type">
               <label for="mortgage-type">Mortgage Type</label>
@@ -80,9 +85,7 @@
               </div>
             </div>
             <!-- <div class="submt-btn"> -->
-            <button id="calculate_repayments" class="calc-sbmt">
-              Calculate repayments
-            </button>
+            <button id="calculate_repayments">Calculate repayments</button>
             <!-- </div> -->
           </form>
         </div>

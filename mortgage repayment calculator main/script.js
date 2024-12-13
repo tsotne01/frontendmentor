@@ -33,10 +33,17 @@ const calcAndDisplayMortgage = (e) => {
       resultCard.classList.remove("hidden");
     }
 
-    monthlyRepayments.style.fontSize = "15px";
-    totalRepay.style.fontSize = "15px";
-    monthlyRepayments.textContent = `calculation results when choosen replacement`;
-    totalRepay.textContent = ` calculation results when choosen replacement`;
+    if (mrtamount && mrtTrm && intRT) {
+      let monthlyPay = 0;
+      let totalRep = 0;
+      const monthlyRate = mrtamount / 100 / 12;
+      const n = mrtTrm * 12;
+      monthlyPay =
+        (mrtamount * monthlyRate) / (1 - Math.pow(1 + monthlyRate, -n));
+      totalRep = monthlyPay * 12;
+      monthlyRepayments.textContent = `${monthlyPay}`;
+      totalRepay.textContent = `${totalRep}`;
+    }
   } else if (interestOnly.checked) {
     if (!seeResultCard.classList.contains("hidden")) {
       seeResultCard.classList.add("hidden");
@@ -45,10 +52,16 @@ const calcAndDisplayMortgage = (e) => {
       resultCard.classList.remove("hidden");
     }
 
-    monthlyRepayments.style.fontSize = "15px";
-    totalRepay.style.fontSize = "15px";
-    monthlyRepayments.textContent = `calculation results when choosen interest only`;
-    totalRepay.textContent = `calculation results when choosen interest only`;
+    if (mrtamount && mrtTrm && intRT) {
+      let monthlyPay = 0;
+      let totalRep = 0;
+      const monthlyRate = mrtamount / 100 / 12;
+      const n = mrtTrm * 12;
+      monthlyPay = (mrtamount * (mrtamount / 100)) / 12;
+      totalRep = monthlyPay * mrtTrm * 12;
+      monthlyRepayments.textContent = `${monthlyPay}`;
+      totalRepay.textContent = `${totalRep}`;
+    }
   }
 };
 

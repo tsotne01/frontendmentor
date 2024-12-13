@@ -21,8 +21,8 @@
   --result-b-radius: 30px;
   --calc-container-padding: 20px;
   --clear-btn-height: --fs-paragraph;
-  --calculate-sbmt-btn-ht: 40px;
-  --calculate-sbmt-btn-wth: 60%;
+  --calculate-sbmt-btn-ht: 50px;
+  --calculate-sbmt-btn-wth: 70%;
   --calculate-sbmt-btn-b-radius: 20px;
 }
 
@@ -44,14 +44,20 @@
 .cotainer {
   width: var(--calculator-width);
   display: flex;
+
   background-color: var(--White);
   border-radius: var(--result-b-radius);
+}
+
+.cotainer__calculator {
+  width: calc(var(--calculator-width) / 2);
 }
 
 .cotainer__calculator form {
   padding: var(--calc-container-padding)
     calc(var(--calc-container-padding) * 1.5);
   height: var(--calculator-height);
+
   display: flex;
   justify-content: space-around;
   flex-direction: column;
@@ -123,12 +129,11 @@ a:active,
   width: var(--calculate-sbmt-btn-wth);
   font-size: var(--fs-paragraph);
   border: 0;
-  border-radius: var(--calculate-sbmt-btn-b-radius);
-}
 
-.submt-btn {
+  text-align: center;
+
+  border-radius: var(--calculate-sbmt-btn-b-radius);
   font-weight: var(--fw-700);
-  vertical-align: center;
 }
 
 #calculate_repayments::before {
@@ -140,7 +145,8 @@ a:active,
   background-color: var(--Slate-900);
   border-radius: 0 var(--result-b-radius) var(--result-b-radius)
     calc(var(--result-b-radius) * 3);
-  width: 100%;
+  /* width: 100%; */
+  width: calc(var(--calculator-width) / 2);
   height: var(--calculator-height);
   padding: var(--calc-container-padding)
     calc(var(--calc-container-padding) * 1.5);
@@ -190,6 +196,7 @@ a:active,
   background-color: var(--Slate-1000);
   line-height: 1.5;
   display: flex;
+  max-width: calc(var(--calculator-width) / 2);
   justify-content: space-between;
   flex-direction: column;
 
@@ -257,11 +264,22 @@ a:active,
   .see-result {
     border-radius: 0;
     height: fit-content;
+    width: 100%;
+  }
+  .cotainer__calculator {
+    width: 100%;
   }
   .result__calculation-box {
     height: fit-content;
   }
   .cotainer__calculator {
-    padding: var(--calc-container-padding);
+    padding: calc(var(--calc-container-padding) * 0.3);
   }
+}
+
+.choose__option {
+  display: flex;
+  justify-content: space-between;
+  /* width: calc(var(--calculator-width) * 0.4); */
+  gap: 20px;
 }
