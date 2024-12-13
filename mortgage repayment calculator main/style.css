@@ -66,6 +66,22 @@
     color: var(--Slate-900);
   }
 }
+
+.container__calculator-body,
+.mortage__or__interest__type {
+  line-height: 3;
+}
+
+.radio__group {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  vertical-align: middle;
+  border: solid 1px black;
+}
+.radio__group input {
+  margin: 0 10px;
+}
 .cotainer__calculator-clear-btn {
   text-decoration: none;
   border: 0;
@@ -78,8 +94,21 @@
 
 .cotainer__calculator-clear-btn:hover,
 input:hover,
-label:hover {
+label:hover,
+a:hover,
+.radio__group:hover {
   cursor: pointer;
+}
+
+#mortgage-term:active,
+#mortgage-amount:active,
+#interest-rate:active,
+a:active,
+.radio__group:active {
+  border: solid 1px var(--Lime);
+}
+.radio__group:not(label):active {
+  background-color: var(--Lime);
 }
 
 .mortage__or__interest__type {
@@ -99,11 +128,11 @@ label:hover {
 
 .submt-btn {
   font-weight: var(--fw-700);
+  vertical-align: center;
 }
 
 #calculate_repayments::before {
-  /* content: url(./assets/images/icon-calculator.svg); */
-  content: "sdasa";
+  content: url(./assets/images/icon-calculator.svg);
 }
 
 .results,

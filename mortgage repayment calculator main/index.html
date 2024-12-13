@@ -11,7 +11,8 @@
       sizes="32x32"
       href="./assets/images/favicon-32x32.png"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./style.css" />
 
     <title>Frontend Mentor | Mortgage repayment calculator</title>
   </head>
@@ -78,15 +79,11 @@
                 <label for="interest-only">Interest Only</label>
               </div>
             </div>
-            <div class="submt-btn">
-              <input
-                type="submit"
-                id="calculate_repayments"
-                class="calc-sbmt"
-                value="Calculate repayments"
-                required
-              />
-            </div>
+            <!-- <div class="submt-btn"> -->
+            <button id="calculate_repayments" class="calc-sbmt">
+              Calculate repayments
+            </button>
+            <!-- </div> -->
           </form>
         </div>
         <div class="see-result">
